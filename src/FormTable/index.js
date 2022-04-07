@@ -132,7 +132,7 @@ const Form = () => {
 
       <br></br>
       <br />
-      <table class="container table table-responsive colorTable table-striped shadow-sm">
+      <table className="container table table-responsive colorTable table-striped shadow-sm">
         <thead>
           <tr>
             <th scope="col">Nama Lengkap</th>

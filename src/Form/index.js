@@ -2,15 +2,8 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../Navbar";
 import firebase from "../Firebase";
 import { storage } from "../Firebase";
-// import { useForm } from "react-hook-form";
 
 const Form = () => {
-  // const { register, handleSubmit } = useForm();
-  // const {
-  //   register,
-  //   handleSubmit,
-  //   formState: { errors },
-  // } = useForm();
   const [array, setArr] = useState([]);
   const [namalengkap, setNamaLengkap] = useState("");
   const [jeniskelamin, setJeniskelamin] = useState("");
@@ -288,84 +281,84 @@ const Form = () => {
             <button type="button" className="btn btn-primary" onClick={submit}>
               {button}
             </button> */}
-            <form action="action_page.html" class="was-validated" method="get">
-              <div class="form-group">
+            <form action="action_page.html" className="was-validated" method="get">
+              <div className="form-group">
                 <label for="namalengkap">Nama Lengkap:</label>
                 <input type="text" value={namalengkap} onChange={(e) => setNamaLengkap(e.target.value)} className="form-control" id="namalengkap" placeholder="Masukan Nama Lengkap" name="namalengkap" required />
-                <div class="valid-feedback">data Valid</div>
-                <div class="invalid-feedback">maaf, ini tidak boleh kosong !</div>
+                <div className="valid-feedback">data Valid</div>
+                <div className="invalid-feedback">maaf, ini tidak boleh kosong !</div>
               </div>
-              <div class="form-group">
+              <div className="form-group">
                 <label for="jeniskelamin">Jenis Kelamin</label>
                 <input type="text" value={jeniskelamin} onChange={(e) => setJeniskelamin(e.target.value)} className="form-control" id="jeniskelamin" name="jeniskelamin" required />
-                <div class="valid-feedback">data Valid</div>
-                <div class="invalid-feedback">maaf, ini tidak boleh kosong !</div>
+                <div className="valid-feedback">data Valid</div>
+                <div className="invalid-feedback">maaf, ini tidak boleh kosong !</div>
               </div>
-              <div class="form-group">
+              <div className="form-group">
                 <label for="pernikahan">Status</label>
                 <input type="text" value={pernikahan} onChange={(e) => setMarried(e.target.value)} className="form-control" id="pernikahan" name="pernikahan" required />
-                <div class="valid-feedback">data Valid</div>
-                <div class="invalid-feedback">maaf, ini tidak boleh kosong !</div>
+                <div className="valid-feedback">data Valid</div>
+                <div className="invalid-feedback">maaf, ini tidak boleh kosong !</div>
               </div>
-              <div class="form-group">
+              <div className="form-group">
                 <label for="kelahiran">Tanggal Lahir</label>
                 <input type="date" value={kelahiran} onChange={(e) => setBirthday(e.target.value)} className="form-control" id="kelahiran" name="kelahiran" required />
-                <div class="valid-feedback">data Valid</div>
-                <div class="invalid-feedback">maaf, ini tidak boleh kosong !</div>
+                <div className="valid-feedback">data Valid</div>
+                <div className="invalid-feedback">maaf, ini tidak boleh kosong !</div>
               </div>
-              <div class="form-group">
+              <div className="form-group">
                 <label for="agama">Agama</label>
                 <input type="text" value={agama} onChange={(e) => setAgama(e.target.value)} className="form-control" id="agama" name="agama" required />
-                <div class="valid-feedback">data Valid</div>
-                <div class="invalid-feedback">maaf, ini tidak boleh kosong !</div>
+                <div className="valid-feedback">data Valid</div>
+                <div className="invalid-feedback">maaf, ini tidak boleh kosong !</div>
               </div>
-              <div class="form-group">
+              <div className="form-group">
                 <label for="pendidikan">Pendidikan Terakhir</label>
                 <input type="text" value={pendidikan} onChange={(e) => setPendidikan(e.target.value)} className="form-control" id="pendidikan" name="pendidikan" required />
-                <div class="valid-feedback">data Valid</div>
-                <div class="invalid-feedback">maaf, ini tidak boleh kosong !</div>
+                <div className="valid-feedback">data Valid</div>
+                <div className="invalid-feedback">maaf, ini tidak boleh kosong !</div>
               </div>
-              <div class="form-group">
+              <div className="form-group">
                 <label for="pekerjaan">Pekerjaan</label>
                 <input type="text" value={pekerjaan} onChange={(e) => setPekerjaan(e.target.value)} className="form-control" id="pekerjaan" name="pekerjaan" required />
-                <div class="valid-feedback">data Valid</div>
-                <div class="invalid-feedback">maaf, ini tidak boleh kosong !</div>
+                <div className="valid-feedback">data Valid</div>
+                <div className="invalid-feedback">maaf, ini tidak boleh kosong !</div>
               </div>
-              <div class="form-group">
+              <div className="form-group">
                 <label for="alamat">Alamat</label>
                 <input type="text" value={alamat} onChange={(e) => setAlamat(e.target.value)} className="form-control" id="alamat" name="alamat" required />
-                <div class="valid-feedback">data Valid</div>
-                <div class="invalid-feedback">maaf, ini tidak boleh kosong !</div>
+                <div className="valid-feedback">data Valid</div>
+                <div className="invalid-feedback">maaf, ini tidak boleh kosong !</div>
               </div>
-              <div class="form-group">
+              <div className="form-group">
                 <label for="kewarganegaraan">Kewarganegaraan</label>
                 <input type="text" value={kewarganegaraan} onChange={(e) => setKewarganegaraan(e.target.value)} className="form-control" id="kewarganegaraan" name="kewarganegaraan" required />
-                <div class="valid-feedback">data Valid</div>
-                <div class="invalid-feedback">maaf, ini tidak boleh kosong !</div>
+                <div className="valid-feedback">data Valid</div>
+                <div className="invalid-feedback">maaf, ini tidak boleh kosong !</div>
               </div>
-              <div class="form-group">
+              <div className="form-group">
                 <label for="kk">Nomor Kartu Keluarga</label>
                 <input type="text" value={kk} onChange={(e) => setKk(e.target.value)} className="form-control" id="kk" name="kk" required />
-                <div class="valid-feedback">data Valid</div>
-                <div class="invalid-feedback">maaf, ini tidak boleh kosong !</div>
+                <div className="valid-feedback">data Valid</div>
+                <div className="invalid-feedback">maaf, ini tidak boleh kosong !</div>
               </div>{" "}
-              <div class="form-group">
+              <div className="form-group">
                 <label for="nik">NIK</label>
                 <input type="text" value={nik} onChange={(e) => setNik(e.target.value)} className="form-control" id="nik" name="nik" required />
-                <div class="valid-feedback">data Valid</div>
-                <div class="invalid-feedback">maaf, ini tidak boleh kosong !</div>
+                <div className="valid-feedback">data Valid</div>
+                <div className="invalid-feedback">maaf, ini tidak boleh kosong !</div>
               </div>
-              <div class="form-group">
+              <div className="form-group">
                 <label for="status">Status dalam Keluarga</label>
                 <input type="text" value={status} onChange={(e) => setStatus(e.target.value)} className="form-control" id="status" name="status" required />
-                <div class="valid-feedback">data Valid</div>
-                <div class="invalid-feedback">maaf, ini tidak boleh kosong !</div>
+                <div className="valid-feedback">data Valid</div>
+                <div className="invalid-feedback">maaf, ini tidak boleh kosong !</div>
               </div>
-              {/* <div class="form-group">
+              {/* <div className="form-group">
                 <label Htmlfor="vaksinasi">Bukti Vaksinasi</label>
                 <input type="file" value={vaksinasi} onChange={(e) => uploadFiles(e.target.files[0])} className="form-control" id="vaksinasi" name="vaksinasi" required />
-                <div class="valid-feedback">data Valid</div>
-                <div class="invalid-feedback">maaf, ini tidak boleh kosong !</div>
+                <div className="valid-feedback">data Valid</div>
+                <div className="invalid-feedback">maaf, ini tidak boleh kosong !</div>
               </div> */}
               <div>
                 <label htmlFor="vaksinasi">Vaksinasi (Vaksinasi)</label>
