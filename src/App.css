@@ -3,6 +3,7 @@
 }
 .colorNav {
   background-color: #30aadd;
+  width: 100%;
 }
 .colorTable {
   background-color: #f9d276;
@@ -34,4 +35,33 @@
   font-style: italic;
   color: blue;
   font-size: 2rem;
+}
+
+/* Rectangle 3 */
+.landing {
+  position: absolute;
+  width: 100%;
+  height: 873px;
+  left: 0px;
+  top: 0px;
+
+  background: linear-gradient(251.07deg, #5790ff 8.38%, #ffffff 46.41%);
+}
+
+/* Data Kependudukan */
+.home {
+  position: absolute;
+  width: 100%;
+  height: 65px;
+  left: 164px;
+  top: 62px;
+
+  font-family: "Odor Mean Chey";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 65px;
+  /* identical to box height */
+
+  color: #000000;
 }

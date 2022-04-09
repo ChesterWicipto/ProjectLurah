@@ -19,9 +19,8 @@ const Form = () => {
   const [kk, setKk] = useState("");
   const [button, setButton] = useState("Save");
   const [select, setSelect] = useState({});
-  // const [vaksinasi, setVaksin] = useState("");
+
   const [vaksinasi, setVaksin] = useState("");
-  const onSubmit = (dat) => console.log(dat);
 
   const resetForm = () => {
     setNamaLengkap("");
@@ -57,7 +56,6 @@ const Form = () => {
       vaksinasi: vaksinasi,
     };
     console.log(data);
-    // uploadFiles(vaksinasi);
 
     if (button === "Save") {
       firebase
@@ -69,7 +67,6 @@ const Form = () => {
 
       resetForm();
       onReload();
-      // uploadFiles();
     } else {
       firebase
         .database()
@@ -81,7 +78,6 @@ const Form = () => {
         .catch(() => alert("gagal"));
       resetForm();
       onReload();
-      // uploadFiles();
     }
   };
 
@@ -115,26 +111,6 @@ const Form = () => {
   useEffect(() => {
     onReload();
   }, []);
-
-  // const onChangeHandlerVaksinasi = (e) => {
-  //   const reader = new FileReader();
-  //   reader.onloadend = function () {
-  //     setVaksin(reader.result);
-  //   };
-  //   reader.readAsDataURL(e);
-
-  //   // var file = e.target.files[0];
-  //   // if (!file) {
-  //   //   return;
-  //   // }
-  //   // var reader = new FileReader();
-  //   // reader.onload = function (e) {
-  //   //   var contents = e.target.resu lt;
-  //   // };
-  //   // reader.readAsText(file);
-  //   // console.log(e.target.files[0]);
-  //   // // }
-  // };
 
   const onUpdateData = (item) => {
     console.log(item);
@@ -227,60 +203,6 @@ const Form = () => {
       <div className="container mt-4  text-black colorTable fw-bold">
         <form>
           <form action="action_page.html" className="was-validated" method="get">
-            {/* <div className="mb-1">
-              <label className="form-label">Nama Lengkap</label>
-              <input required type="text" className="form-control" value={namalengkap} id="namebox" onChange={(e) => setNamaLengkap(e.target.value)} />
-              <div className="form-text">Nama sesuai dengan identitas KTP</div>
-            </div>
-            <label className="form-label">Jenis kelamin</label>
-            <br />
-            <input className="form-control" value={jeniskelamin} onChange={(e) => setJeniskelamin(e.target.value)} type="text" id="genbox" required />
-            <div className="form-text">Pria/Wanita</div>
-            <div>
-              <label className="form-label">Status Pernikahan</label>
-              <input type="text" className="form-control" value={pernikahan} id="mariedbox" onChange={(e) => setMarried(e.target.value)} />
-            </div>
-            <div className="form-text">Kawin / Belum Kawin</div>
-            <div className="mb-1">
-              <label className="form-label">Tempat,Tanggal Lahir</label>
-              <input type="text" className="form-control" value={kelahiran} id="birthdaybox" onChange={(e) => setBirthday(e.target.value)} />
-            </div>
-            <div className="mb-1">
-              <label className="form-label">Pendidikan</label>
-              <input type="text" className="form-control" value={pendidikan} id="studybox" onChange={(e) => setPendidikan(e.target.value)} />
-            </div>
-            <div className="mb-1">
-              <label className="form-label">Agama</label>
-              <input type="text" className="form-control" value={agama} id="religionbox" onChange={(e) => setAgama(e.target.value)} />
-            </div>
-            <div className="mb-1">
-              <label className="form-label">Pekerjaan</label>
-              <input type="text" className="form-control" value={pekerjaan} id="workbox" onChange={(e) => setPekerjaan(e.target.value)} />
-            </div>
-            <div className="mb-1">
-              <label className="form-label">Kewarga Negaraan</label>
-              <input type="text" className="form-control" value={kewarganegaraan} id="nationalbox" onChange={(e) => setKewarganegaraan(e.target.value)} />
-            </div>
-            <div className="mb-1">
-              <label className="form-label">Alamat</label>
-              <input type="text" className="form-control" value={alamat} id="frombox" onChange={(e) => setAlamat(e.target.value)} />
-            </div>
-            <div className="mb-1">
-              <label className="form-label">Status dalam keluarga</label>
-              <input type="text" className="form-control" value={status} id="statusbox" onChange={(e) => setStatus(e.target.value)} />
-            </div>
-            <div className="mb-1">
-              <label className="form-label">NIK</label>
-              <input type="text" className="form-control" value={nik} id="nikbox" onChange={(e) => setNik(e.target.value)} />
-            </div>
-            <div className="mb-1">
-              <label className="form-label">NO KK</label>
-              <input type="text" className="form-control" value={kk} id="kkbox" onChange={(e) => setKk(e.target.value)} />
-            </div>
-            
-            <button type="button" className="btn btn-primary" onClick={submit}>
-              {button}
-            </button> */}
             <form action="action_page.html" className="was-validated" method="get">
               <div className="form-group">
                 <label for="namalengkap">Nama Lengkap:</label>
