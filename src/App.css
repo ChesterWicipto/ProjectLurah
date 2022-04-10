@@ -39,11 +39,11 @@
 
 /* Rectangle 3 */
 .landing {
-  position: absolute;
+  /* Desktop - 1 */
+
+  position: relative;
   width: 100%;
   height: 873px;
-  left: 0px;
-  top: 0px;
 
   background: linear-gradient(251.07deg, #5790ff 8.38%, #ffffff 46.41%);
 }
@@ -64,4 +64,106 @@
   /* identical to box height */
 
   color: #000000;
+}
+
+.teksselamat {
+  /* Selamat datang */
+
+  position: absolute;
+  width: 332px;
+  height: 60px;
+  left: 164px;
+  top: 196px;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 60px;
+  /* identical to box height */
+
+  color: #2a64f8;
+}
+
+.tekspembuka {
+  /* Silahkan masuk ke Akun Admin anda... */
+
+  position: absolute;
+  width: 620px;
+  height: 144px;
+  left: 164px;
+  top: 240px;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 72px;
+
+  color: #000000;
+}
+
+.btnmasuk {
+  /* Rectangle 1 */
+
+  position: absolute;
+  width: 192px;
+  height: 58px;
+  left: 164px;
+  top: 395px;
+
+  background: #5790ff;
+  border-radius: 15px;
+}
+
+.img1 {
+  position: absolute;
+  width: 426px;
+  height: 465px;
+  left: 815px;
+  top: 151px;
+}
+
+.img2 {
+  /* Settings_perspective_matte_s 1 */
+
+  position: absolute;
+  width: 121px;
+  height: 121px;
+  left: 1078px;
+  top: 495px;
+}
+.img3 {
+  /* Shield_perspective_matte_s 1 */
+
+  position: absolute;
+  width: 121px;
+  height: 121px;
+  left: 1199px;
+  top: 410px;
+}
+.img4 {
+  /* Chart_perspective_matte_s 1 */
+
+  position: absolute;
+  width: 121px;
+  height: 121px;
+  left: 1199px;
+  top: 226px;
+}
+.img5 {
+  /* Padlock_perspective_matte_s 1 */
+
+  position: absolute;
+  width: 121px;
+  height: 121px;
+  left: 1078px;
+  top: 136px;
+}
+
+.masuk {
+  background-color: #f9d276;
+  width: 30rem;
+  border-radius: 15px;
+  padding: 2rem;
 }
