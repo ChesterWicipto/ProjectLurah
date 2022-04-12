@@ -207,81 +207,51 @@ const Form = () => {
               <div className="form-group">
                 <label for="namalengkap">Nama Lengkap:</label>
                 <input type="text" value={namalengkap} onChange={(e) => setNamaLengkap(e.target.value)} className="form-control" id="namalengkap" placeholder="Masukan Nama Lengkap" name="namalengkap" required />
-                <div className="valid-feedback">data Valid</div>
-                <div className="invalid-feedback">maaf, ini tidak boleh kosong !</div>
               </div>
               <div className="form-group">
                 <label for="jeniskelamin">Jenis Kelamin</label>
                 <input type="text" value={jeniskelamin} onChange={(e) => setJeniskelamin(e.target.value)} className="form-control" id="jeniskelamin" name="jeniskelamin" required />
-                <div className="valid-feedback">data Valid</div>
-                <div className="invalid-feedback">maaf, ini tidak boleh kosong !</div>
               </div>
               <div className="form-group">
                 <label for="pernikahan">Status</label>
-                <input type="text" value={pernikahan} onChange={(e) => setMarried(e.target.value)} className="form-control" id="pernikahan" name="pernikahan" required />
-                <div className="valid-feedback">data Valid</div>
-                <div className="invalid-feedback">maaf, ini tidak boleh kosong !</div>
+                <input type="text" value={pernikahan} onChange={(e) => setMarried(e.target.value)} className="form-control" id="pernikahan" name="pernikahan" required />\
               </div>
               <div className="form-group">
                 <label for="kelahiran">Tanggal Lahir</label>
                 <input type="date" value={kelahiran} onChange={(e) => setBirthday(e.target.value)} className="form-control" id="kelahiran" name="kelahiran" required />
-                <div className="valid-feedback">data Valid</div>
-                <div className="invalid-feedback">maaf, ini tidak boleh kosong !</div>
               </div>
               <div className="form-group">
                 <label for="agama">Agama</label>
                 <input type="text" value={agama} onChange={(e) => setAgama(e.target.value)} className="form-control" id="agama" name="agama" required />
-                <div className="valid-feedback">data Valid</div>
-                <div className="invalid-feedback">maaf, ini tidak boleh kosong !</div>
               </div>
               <div className="form-group">
                 <label for="pendidikan">Pendidikan Terakhir</label>
                 <input type="text" value={pendidikan} onChange={(e) => setPendidikan(e.target.value)} className="form-control" id="pendidikan" name="pendidikan" required />
-                <div className="valid-feedback">data Valid</div>
-                <div className="invalid-feedback">maaf, ini tidak boleh kosong !</div>
               </div>
               <div className="form-group">
                 <label for="pekerjaan">Pekerjaan</label>
                 <input type="text" value={pekerjaan} onChange={(e) => setPekerjaan(e.target.value)} className="form-control" id="pekerjaan" name="pekerjaan" required />
-                <div className="valid-feedback">data Valid</div>
-                <div className="invalid-feedback">maaf, ini tidak boleh kosong !</div>
               </div>
               <div className="form-group">
                 <label for="alamat">Alamat</label>
                 <input type="text" value={alamat} onChange={(e) => setAlamat(e.target.value)} className="form-control" id="alamat" name="alamat" required />
-                <div className="valid-feedback">data Valid</div>
-                <div className="invalid-feedback">maaf, ini tidak boleh kosong !</div>
               </div>
               <div className="form-group">
                 <label for="kewarganegaraan">Kewarganegaraan</label>
                 <input type="text" value={kewarganegaraan} onChange={(e) => setKewarganegaraan(e.target.value)} className="form-control" id="kewarganegaraan" name="kewarganegaraan" required />
-                <div className="valid-feedback">data Valid</div>
-                <div className="invalid-feedback">maaf, ini tidak boleh kosong !</div>
               </div>
               <div className="form-group">
                 <label for="kk">Nomor Kartu Keluarga</label>
                 <input type="text" value={kk} onChange={(e) => setKk(e.target.value)} className="form-control" id="kk" name="kk" required />
-                <div className="valid-feedback">data Valid</div>
-                <div className="invalid-feedback">maaf, ini tidak boleh kosong !</div>
               </div>{" "}
               <div className="form-group">
                 <label for="nik">NIK</label>
                 <input type="text" value={nik} onChange={(e) => setNik(e.target.value)} className="form-control" id="nik" name="nik" required />
-                <div className="valid-feedback">data Valid</div>
-                <div className="invalid-feedback">maaf, ini tidak boleh kosong !</div>
               </div>
               <div className="form-group">
                 <label for="status">Status dalam Keluarga</label>
                 <input type="text" value={status} onChange={(e) => setStatus(e.target.value)} className="form-control" id="status" name="status" required />
-                <div className="valid-feedback">data Valid</div>
-                <div className="invalid-feedback">maaf, ini tidak boleh kosong !</div>
               </div>
-              {/* <div className="form-group">
-                <label Htmlfor="vaksinasi">Bukti Vaksinasi</label>
-                <input type="file" value={vaksinasi} onChange={(e) => uploadFiles(e.target.files[0])} className="form-control" id="vaksinasi" name="vaksinasi" required />
-                <div className="valid-feedback">data Valid</div>
-                <div className="invalid-feedback">maaf, ini tidak boleh kosong !</div>
-              </div> */}
               <div>
                 <label htmlFor="vaksinasi">Vaksinasi (Vaksinasi)</label>
                 <br />

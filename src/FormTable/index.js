@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../Navbar";
-import { set, ref, push, remove, update, onChildAdded, onValue } from "firebase/database";
 import firebase from "../Firebase";
-import { getDatabase, child, get, onSnapshot } from "firebase/database";
 
 const Form = () => {
   const [array, setArr] = useState([]);
@@ -171,14 +169,6 @@ const Form = () => {
                   buka gambar
                 </a>
               </td>
-              {/* <td>
-                <button className="btn btn-primary " onClick={() => onUpdateData(item)}>
-                  Update
-                </button>
-                <button className="btn btn-warning" onClick={() => onDeleteData(item)}>
-                  Delete
-                </button>
-              </td> */}
             </tr>
           ))}
         </tbody>

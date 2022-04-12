@@ -1,35 +1,39 @@
 import React from "react";
 import Navbar from "../Navbar";
+// import img2 from "../img2.png";
+
 const Masuk = () => {
   return (
-    <div>
+    <div className="bgmasuk">
+      {/* <div>
+        <div className="text-center img2">
+          <img src={img2} className="rounded" alt="..." />
+        </div>{" "}
+      </div> */}
+
       <Navbar />
       <br />
       <br />
       <br />
       <br />
-      <form className="container masuk">
+      <form className="container masuk shadow-lg">
         <div className="mb-3">
-          <label for="exampleInputEmail1" className="form-label">
+          <label for="exampleInputEmail1" className="form-label text-white">
             Email address
           </label>
-          <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-          <div id="emailHelp" className="form-text">
-            We'll never share your email with anyone else.
+          <div className="form-floating">
+            <input type="email" required className="form-control" id="floatingInput" placeholder="name@example.com" />
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div className="form-floating">
+            <input type="password" required className="form-control" id="floatingPassword" placeholder="Password" />
+            <label for="floatingPassword">Password</label>
           </div>
         </div>
-        <div className="mb-3">
-          <label for="exampleInputPassword1" className="form-label">
-            Password
-          </label>
-          <input type="password" className="form-control" id="exampleInputPassword1" />
-        </div>
-
-        <button type="submit" className="btn btn-primary ">
-          <a className="btn  btn-primary fw-bold" href="/admin" role="button">
-            Masuk
-          </a>
+        <button className="w-100 btn btn-lg btn-primary" type="submit">
+          Masuk
         </button>
+        <p className="mt-5 mb-3 text-muted text-white">@lee_hongw</p>
       </form>
     </div>
   );
