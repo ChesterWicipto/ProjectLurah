@@ -1,10 +1,9 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import About from "../../About";
 import FormLogin from "../../Form";
 import FormTable from "../../FormTable";
 import Masuk from "../../Masuk";
-import Navbar from "../../Navbar";
 import Start from "../../Start";
 
 export default function App() {

@@ -18,16 +18,16 @@ const Masuk = () => {
       <br />
       <form className="container masuk shadow-lg">
         <div className="mb-3">
-          <label for="exampleInputEmail1" className="form-label text-white">
+          <label htmlFor="exampleInputEmail1" className="form-label text-white">
             Email address
           </label>
           <div className="form-floating">
             <input type="email" required className="form-control" id="floatingInput" placeholder="name@example.com" />
-            <label for="floatingInput">Email address</label>
+            <label htmlFor="floatingInput">Email address</label>
           </div>
           <div className="form-floating">
             <input type="password" required className="form-control" id="floatingPassword" placeholder="Password" />
-            <label for="floatingPassword">Password</label>
+            <label htmlFor="floatingPassword">Password</label>
           </div>
         </div>
         <button className="w-100 btn btn-lg btn-primary" type="submit">

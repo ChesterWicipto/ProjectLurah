@@ -5,8 +5,16 @@
   background-color: transparent;
   font-size: x-large;
 }
+.formdata {
+  background-image: url("./img3.png");
+  opacity: 90%;
+  width: auto;
+  height: auto;
+}
 .colorTable {
-  background-color: #f9d276;
+  background-color: #000000;
+  opacity: 80%;
+  border-radius: 15px;
 }
 .navcol {
   background-color: #87ceeb;
@@ -47,7 +55,7 @@
   left: 0px;
   top: 0px;
 
-  background: #85f4ff;
+  background-image: url("../src/img4.png");
 }
 
 /* Data Kependudukan */
@@ -163,4 +171,11 @@
   height: 500px;
   left: 0px;
   top: 45px;
+}
+
+.tabeldata {
+  background-image: url("../src/img2.png");
+  position: absolute;
+  width: 1366px;
+  height: 695px;
 }

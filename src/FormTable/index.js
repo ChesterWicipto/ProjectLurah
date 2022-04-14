@@ -125,13 +125,11 @@ const Form = () => {
   };
 
   return (
-    <div>
+    <div className="tabeldata">
       <Navbar />
 
-      <br></br>
-      <br />
       <table className="container table table-responsive colorTable table-striped shadow-sm">
-        <thead>
+        <thead className="text-white">
           <tr>
             <th scope="col">Nama Lengkap</th>
             <th scope="col">Jenis Kelamin</th>
@@ -152,18 +150,18 @@ const Form = () => {
         <tbody>
           {array.map((item) => (
             <tr>
-              <td>{item.namalengkap}</td>
-              <td>{item.jeniskelamin}</td>
-              <td>{item.alamat}</td>
-              <td>{item.pendidikan}</td>
-              <td>{item.pernikahan}</td>
-              <td>{item.kelahiran}</td>
-              <td>{item.status}</td>
-              <td>{item.agama}</td>
-              <td>{item.nik}</td>
-              <td>{item.kk}</td>
-              <td>{item.pekerjaan}</td>
-              <td>{item.kewarganegaraan}</td>
+              <td className="text-white">{item.namalengkap}</td>
+              <td className="text-white">{item.jeniskelamin}</td>
+              <td className="text-white">{item.alamat}</td>
+              <td className="text-white">{item.pendidikan}</td>
+              <td className="text-white">{item.pernikahan}</td>
+              <td className="text-white">{item.kelahiran}</td>
+              <td className="text-white">{item.status}</td>
+              <td className="text-white">{item.agama}</td>
+              <td className="text-white">{item.nik}</td>
+              <td className="text-white">{item.kk}</td>
+              <td className="text-white">{item.pekerjaan}</td>
+              <td className="text-white">{item.kewarganegaraan}</td>
               <td>
                 <a href={item.vaksinasi} target="_blank">
                   buka gambar
