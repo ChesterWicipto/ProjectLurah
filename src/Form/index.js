@@ -195,59 +195,59 @@ const Form = () => {
     }
   };
   return (
-    <div className="formdata">
+    <div className="tabeldata">
       <Navbar />
 
-      <div className="container mt-4  text-white colorTable fw-bold">
+      <div className="container mt-4  text-black colorTable fw-bold">
         <form>
           <form action="action_page.html" className="was-validated" method="get">
             <form action="action_page.html" className="was-validated" method="get">
               <div className="form-group">
-                <label htmlFor="namalengkap">Nama Lengkap:</label>
+                <label for="namalengkap">Nama Lengkap:</label>
                 <input type="text" value={namalengkap} onChange={(e) => setNamaLengkap(e.target.value)} className="form-control" id="namalengkap" placeholder="Masukan Nama Lengkap" name="namalengkap" required />
               </div>
               <div className="form-group">
-                <label htmlFor="jeniskelamin">Jenis Kelamin</label>
+                <label for="jeniskelamin">Jenis Kelamin</label>
                 <input type="text" value={jeniskelamin} onChange={(e) => setJeniskelamin(e.target.value)} className="form-control" id="jeniskelamin" name="jeniskelamin" required />
               </div>
               <div className="form-group">
-                <label htmlFor="pernikahan">Status</label>
+                <label for="pernikahan">Status</label>
                 <input type="text" value={pernikahan} onChange={(e) => setMarried(e.target.value)} className="form-control" id="pernikahan" name="pernikahan" required />
               </div>
               <div className="form-group">
-                <label htmlFor="kelahiran">Tanggal Lahir</label>
+                <label for="kelahiran">Tanggal Lahir</label>
                 <input type="date" value={kelahiran} onChange={(e) => setBirthday(e.target.value)} className="form-control" id="kelahiran" name="kelahiran" required />
               </div>
               <div className="form-group">
-                <label htmlFor="agama">Agama</label>
+                <label for="agama">Agama</label>
                 <input type="text" value={agama} onChange={(e) => setAgama(e.target.value)} className="form-control" id="agama" name="agama" required />
               </div>
               <div className="form-group">
-                <label htmlFor="pendidikan">Pendidikan Terakhir</label>
+                <label for="pendidikan">Pendidikan Terakhir</label>
                 <input type="text" value={pendidikan} onChange={(e) => setPendidikan(e.target.value)} className="form-control" id="pendidikan" name="pendidikan" required />
               </div>
               <div className="form-group">
-                <label htmlFor="pekerjaan">Pekerjaan</label>
+                <label for="pekerjaan">Pekerjaan</label>
                 <input type="text" value={pekerjaan} onChange={(e) => setPekerjaan(e.target.value)} className="form-control" id="pekerjaan" name="pekerjaan" required />
               </div>
               <div className="form-group">
-                <label htmlFor="alamat">Alamat</label>
+                <label for="alamat">Alamat</label>
                 <input type="text" value={alamat} onChange={(e) => setAlamat(e.target.value)} className="form-control" id="alamat" name="alamat" required />
               </div>
               <div className="form-group">
-                <label htmlFor="kewarganegaraan">Kewarganegaraan</label>
+                <label for="kewarganegaraan">Kewarganegaraan</label>
                 <input type="text" value={kewarganegaraan} onChange={(e) => setKewarganegaraan(e.target.value)} className="form-control" id="kewarganegaraan" name="kewarganegaraan" required />
               </div>
               <div className="form-group">
-                <label htmlFor="kk">Nomor Kartu Keluarga</label>
+                <label for="kk">Nomor Kartu Keluarga</label>
                 <input type="text" value={kk} onChange={(e) => setKk(e.target.value)} className="form-control" id="kk" name="kk" required />
               </div>{" "}
               <div className="form-group">
-                <label htmlFor="nik">NIK</label>
+                <label for="nik">NIK</label>
                 <input type="text" value={nik} onChange={(e) => setNik(e.target.value)} className="form-control" id="nik" name="nik" required />
               </div>
               <div className="form-group">
-                <label htmlFor="status">Status dalam Keluarga</label>
+                <label for="status">Status dalam Keluarga</label>
                 <input type="text" value={status} onChange={(e) => setStatus(e.target.value)} className="form-control" id="status" name="status" required />
               </div>
               <div>
@@ -262,28 +262,10 @@ const Form = () => {
             </form>
           </form>
         </form>
-
-        {/* <div className="form-group">
-            <label htmlhtmlFor="image" className="form-label">
-              Picture
-            </label>
-            <input className="form-control" type="file" id="image" required />
-          </div> */}
-        <br />
-        {/* <div className="mb-1">
-            <label className="form-label">Vaksinasi</label>
-            <div className="input-group mb-3">
-              <input type="file" className="form-control" value={vaksinasi} id="vaksinbox" onChange={(e) => setVaksin(e.target.value)} />
-              <label className="input-group-text" htmlFor="vaksinbox">
-                Upload
-              </label>
-            </div>
-          </div>
-          <br /> */}
       </div>
       <br></br>
       <br />
-      <table className="container text-white table colorTable table-striped table-responsive">
+      <table className="container table colorTable table-striped table-responsive">
         <thead>
           <tr>
             <th scope="col">Nama Lengkap</th>
@@ -305,20 +287,20 @@ const Form = () => {
         <tbody>
           {array.map((item) => (
             <tr>
-              <td className="text-white">{item.namalengkap}</td>
-              <td className="text-white">{item.jeniskelamin}</td>
-              <td className="text-white">{item.alamat}</td>
-              <td className="text-white">{item.pendidikan}</td>
-              <td className="text-white">{item.pernikahan}</td>
-              <td className="text-white">{item.kelahiran}</td>
-              <td className="text-white">{item.status}</td>
-              <td className="text-white">{item.agama}</td>
-              <td className="text-white">{item.nik}</td>
-              <td className="text-white">{item.kk}</td>
-              <td className="text-white">{item.pekerjaan}</td>
-              <td className="text-white">{item.kewarganegaraan}</td>
+              <td>{item.namalengkap}</td>
+              <td>{item.jeniskelamin}</td>
+              <td>{item.alamat}</td>
+              <td>{item.pendidikan}</td>
+              <td>{item.pernikahan}</td>
+              <td>{item.kelahiran}</td>
+              <td>{item.status}</td>
+              <td>{item.agama}</td>
+              <td>{item.nik}</td>
+              <td>{item.kk}</td>
+              <td>{item.pekerjaan}</td>
+              <td>{item.kewarganegaraan}</td>
               <td>
-                <a href={item.vaksinasi} rel="noopener noreferrer" target="_blank">
+                <a href={item.vaksinasi} target="_blank">
                   Buka Gambar
                 </a>
               </td>

@@ -8,8 +8,12 @@
 .formdata {
   background-image: url("./img3.png");
   opacity: 90%;
-  width: auto;
-  height: auto;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-width: 100vw;
+  min-height: 100vh;
 }
 .colorTable {
   background-color: #000000;
@@ -49,12 +53,11 @@
 .landing {
   /* Rectangle 3 */
 
-  position: absolute;
-  width: 1366px;
-  height: 695px;
-  left: 0px;
-  top: 0px;
-
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-width: 100vw;
+  min-height: 100vh;
   background-image: url("../src/img4.png");
 }
 
@@ -76,54 +79,17 @@
   color: #000000;
 }
 
-.teksselamat {
-  /* Selamat datang */
-
-  position: absolute;
-  width: 500px;
-  height: 60px;
-  left: 164px;
-  top: 170px;
-
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 50px;
-  line-height: 60px;
-  /* identical to box height */
-
-  color: #000000;
-}
-
-.tekspembuka {
-  /* Silahkan masuk ke Akun Admin anda... */
-
-  position: absolute;
-  width: 620px;
-  height: 144px;
-  left: 164px;
-  top: 240px;
-
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 72px;
-
-  color: #000000;
-}
-
 .btnmasuk {
   /* Rectangle 1 */
 
   position: absolute;
-  width: 192px;
-  height: 58px;
-  left: 164px;
-  top: 395px;
+  width: 198px;
+  height: 60px;
+  left: 180px;
+  top: 320px;
 
   background: #5790ff;
-  border-radius: 15px;
+  border-radius: 20px;
 }
 
 .img1 {
@@ -141,11 +107,11 @@
 
 .bgmasuk {
   background-image: url("../src/img2.png");
-  position: absolute;
-  width: 1366px;
-  height: 695px;
-  left: 0px;
-  top: 0px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-width: 100vw;
+  min-height: 100vh;
 }
 .masuk {
   /* background: transparent; */
@@ -175,7 +141,10 @@
 
 .tabeldata {
   background-image: url("../src/img2.png");
-  position: absolute;
-  width: 1366px;
-  height: 695px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-width: 100vw;
+  min-height: 100vh;
 }

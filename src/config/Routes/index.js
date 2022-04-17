@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import About from "../../About";
-import FormLogin from "../../Form";
+import Form from "../../Form";
 import FormTable from "../../FormTable";
 import Masuk from "../../Masuk";
 import Start from "../../Start";
@@ -17,7 +17,7 @@ export default function App() {
           <Start />
         </Route>
         <Route path="/admin">
-          <FormLogin />
+          <Form />
         </Route>
         <Route path="/table">
           <FormTable />
