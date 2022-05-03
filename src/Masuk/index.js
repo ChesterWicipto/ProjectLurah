@@ -33,7 +33,6 @@ const Masuk = () => {
         </div>{" "}
       </div> */}
 
-      <Navbar />
       <br />
       <br />
       <br />

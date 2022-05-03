@@ -55,17 +55,11 @@ const Form = () => {
     console.log(data);
 
     if (button === "Save") {
-      firebase
-        .database()
-        .ref("users")
-        .push(data);
+      firebase.database().ref("users").push(data);
       resetForm();
       onReload();
     } else {
-      firebase
-        .database()
-        .ref(`users/${select.id}`)
-        .set(data);
+      firebase.database().ref(`users/${select.id}`).set(data);
       resetForm();
       onReload();
     }
@@ -117,15 +111,12 @@ const Form = () => {
     setButton("Update");
   };
   const onDeleteData = (item) => {
-    firebase
-      .database()
-      .ref(`users/${item.id}`)
-      .remove();
+    firebase.database().ref(`users/${item.id}`).remove();
     onReload();
   };
 
   return (
-    <div>
+    <div className="bgmasuk">
       <Navbar />
 
       <br></br>

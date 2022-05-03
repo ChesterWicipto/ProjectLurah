@@ -20,7 +20,7 @@ const Form = () => {
   const [button, setButton] = useState("Save");
   const [select, setSelect] = useState({});
 
-  const [vaksinasi, setVaksin] = useState("");
+  const [bukti, setBukti] = useState("");
 
   const resetForm = () => {
     setNamaLengkap("");
@@ -35,7 +35,7 @@ const Form = () => {
     setStatus("");
     setNik("");
     setKk("");
-    setVaksin("");
+    setBukti("");
     setButton("Save");
     setSelect({});
   };
@@ -53,7 +53,7 @@ const Form = () => {
       status: status,
       nik: nik,
       kk: kk,
-      vaksinasi: vaksinasi,
+      bukti: bukti,
     };
     console.log(data);
 
@@ -124,9 +124,9 @@ const Form = () => {
     setKewarganegaraan(item.kewarganegaraan);
     setNik(item.nik);
     setKk(item.kk);
-    setVaksin(item.vaksinasi);
+    setBukti(item.bukti);
     setSelect(item);
-    setVaksin(item.vaksinasi);
+    setBukti(item.bukti);
     setButton("Update");
   };
   const onDeleteData = (item) => {
@@ -153,7 +153,7 @@ const Form = () => {
           .child(file.name)
           .getDownloadURL()
           .then((url) => {
-            setVaksin(url);
+            setBukti(url);
           });
       }
     );
@@ -253,7 +253,17 @@ const Form = () => {
               <div>
                 <label htmlFor="vaksinasi">Vaksinasi (Vaksinasi)</label>
                 <br />
-                <input className="form-control" type="file" id="vaksinasi" onChange={(e) => uploadFiles(e.target.files[0])} />
+                <input className="form-control" type="file" id="bukti" onChange={(e) => uploadFiles(e.target.files[0])} />
+              </div>
+              <div>
+                <label htmlFor="vaksinasi">Bukti KTP</label>
+                <br />
+                <input className="form-control" type="file" id="bukti" onChange={(e) => uploadFiles(e.target.files[0])} />
+              </div>
+              <div>
+                <label htmlFor="vaksinasi">Bukti Kartu Keluarga</label>
+                <br />
+                <input className="form-control" type="file" id="bukti" onChange={(e) => uploadFiles(e.target.files[0])} />
               </div>
               <br />
               <button type="submit" className="btn btn-primary" onClick={validasi}>
@@ -268,6 +278,8 @@ const Form = () => {
       <table className="container table colorTable table-striped table-responsive">
         <thead>
           <tr>
+            <th scope="col">NIK</th>
+            <th scope="col">Kartu Keluarga</th>
             <th scope="col">Nama Lengkap</th>
             <th scope="col">Jenis Kelamin</th>
             <th scope="col">Alamat</th>
@@ -276,8 +288,7 @@ const Form = () => {
             <th scope="col">Kelahiran</th>
             <th scope="col">Status</th>
             <th scope="col">Agama</th>
-            <th scope="col">NIK</th>
-            <th scope="col">Kartu Keluarga</th>
+
             <th scope="col">Pekerjaan</th>
             <th scope="col">kewarganegaraan</th>
             <th scope="col">Vaksinasi</th>
@@ -287,6 +298,8 @@ const Form = () => {
         <tbody>
           {array.map((item) => (
             <tr>
+              <td>{item.nik}</td>
+              <td>{item.kk}</td>
               <td>{item.namalengkap}</td>
               <td>{item.jeniskelamin}</td>
               <td>{item.alamat}</td>
@@ -295,12 +308,10 @@ const Form = () => {
               <td>{item.kelahiran}</td>
               <td>{item.status}</td>
               <td>{item.agama}</td>
-              <td>{item.nik}</td>
-              <td>{item.kk}</td>
               <td>{item.pekerjaan}</td>
               <td>{item.kewarganegaraan}</td>
               <td>
-                <a href={item.vaksinasi} target="_blank">
+                <a href={item.bukti} target="_blank">
                   Buka Gambar
                 </a>
               </td>
