@@ -19,8 +19,10 @@ const Form = () => {
   const [kk, setKk] = useState("");
   const [button, setButton] = useState("Save");
   const [select, setSelect] = useState({});
+  const [buktiktp, setKtp] = useState("");
+  const [buktikk, setFotoKk] = useState("");
 
-  const [bukti, setBukti] = useState("");
+  const [vaksinasi, setVaksin] = useState("");
 
   const resetForm = () => {
     setNamaLengkap("");
@@ -35,7 +37,9 @@ const Form = () => {
     setStatus("");
     setNik("");
     setKk("");
-    setBukti("");
+    setVaksin("");
+    setKtp("");
+    setFotoKk("");
     setButton("Save");
     setSelect({});
   };
@@ -53,14 +57,16 @@ const Form = () => {
       status: status,
       nik: nik,
       kk: kk,
-      bukti: bukti,
+      vaksinasi: vaksinasi,
+      buktikk: buktikk,
+      buktiktp: buktiktp,
     };
     console.log(data);
 
     if (button === "Save") {
       firebase
         .database()
-        .ref("users")
+        .ref("users1")
         .push(data)
         .then(() => {})
         .catch(() => alert("gagal"));
@@ -70,7 +76,7 @@ const Form = () => {
     } else {
       firebase
         .database()
-        .ref(`users/${select.id}`)
+        .ref(`users1/${select.id}`)
         .set(data)
         .then(() => {
           alert("berhasil, berhasil, berhasil hore");
@@ -84,7 +90,7 @@ const Form = () => {
   const onReload = () => {
     firebase
       .database()
-      .ref("users")
+      .ref("users1")
       .once("value", (res) => {
         if (res.val()) {
           const rawData = res.val();
@@ -124,15 +130,17 @@ const Form = () => {
     setKewarganegaraan(item.kewarganegaraan);
     setNik(item.nik);
     setKk(item.kk);
-    setBukti(item.bukti);
+    setVaksin(item.vaksinasi);
     setSelect(item);
-    setBukti(item.bukti);
+    setVaksin(item.vaksinasi);
+    setKtp(item.buktiktp);
+    setFotoKk(item.buktikk);
     setButton("Update");
   };
   const onDeleteData = (item) => {
     firebase
       .database()
-      .ref(`users/${item.id}`)
+      .ref(`users1/${item.id}`)
       .remove()
       .then(() => {
         alert("delete berhasil");
@@ -153,7 +161,7 @@ const Form = () => {
           .child(file.name)
           .getDownloadURL()
           .then((url) => {
-            setBukti(url);
+            setVaksin(url);
           });
       }
     );
@@ -173,10 +181,14 @@ const Form = () => {
     let nik = document.getElementById("nik").value;
     let status = document.getElementById("status").value;
     let vaksinasi = document.getElementById("vaksinasi").value;
+    let buktiktp = document.getElementById("buktiktp").value;
+    let buktikk = document.getElementById("buktikk").value;
 
     if (
       namalengkap !== "" &&
       vaksinasi !== "" &&
+      buktiktp !== "" &&
+      buktikk !== "" &&
       alamat !== "" &&
       status !== "" &&
       kewarganegaraan !== "" &&
@@ -253,17 +265,17 @@ const Form = () => {
               <div>
                 <label htmlFor="vaksinasi">Vaksinasi (Vaksinasi)</label>
                 <br />
-                <input className="form-control" type="file" id="bukti" onChange={(e) => uploadFiles(e.target.files[0])} />
+                <input className="form-control" type="file" id="vaksinasi" onChange={(e) => uploadFiles(e.target.files[0])} />
               </div>
               <div>
-                <label htmlFor="vaksinasi">Bukti KTP</label>
+                <label htmlFor="buktiktp">Foto KTP</label>
                 <br />
-                <input className="form-control" type="file" id="bukti" onChange={(e) => uploadFiles(e.target.files[0])} />
+                <input className="form-control" type="file" id="buktiktp" onChange={(e) => uploadFiles(e.target.files[0])} />
               </div>
               <div>
-                <label htmlFor="vaksinasi">Bukti Kartu Keluarga</label>
+                <label htmlFor="buktikk">Foto KK</label>
                 <br />
-                <input className="form-control" type="file" id="bukti" onChange={(e) => uploadFiles(e.target.files[0])} />
+                <input className="form-control" type="file" id="buktikk" onChange={(e) => uploadFiles(e.target.files[0])} />
               </div>
               <br />
               <button type="submit" className="btn btn-primary" onClick={validasi}>
@@ -292,7 +304,8 @@ const Form = () => {
             <th scope="col">Pekerjaan</th>
             <th scope="col">kewarganegaraan</th>
             <th scope="col">Vaksinasi</th>
-            <th scope="col">Edit</th>
+            <th scope="col">Foto KTP</th>
+            <th scope="col">Foto KK</th>
           </tr>
         </thead>
         <tbody>
@@ -308,11 +321,22 @@ const Form = () => {
               <td>{item.kelahiran}</td>
               <td>{item.status}</td>
               <td>{item.agama}</td>
+
               <td>{item.pekerjaan}</td>
               <td>{item.kewarganegaraan}</td>
               <td>
-                <a href={item.bukti} target="_blank">
-                  Buka Gambar
+                <a href={item.vaksinasi} target="_blank">
+                  buka gambar
+                </a>
+              </td>
+              <td>
+                <a href={item.buktiktp} target="_blank">
+                  buka gambar
+                </a>
+              </td>
+              <td>
+                <a href={item.buktikk} target="_blank">
+                  buka gambar
                 </a>
               </td>
               <td>
