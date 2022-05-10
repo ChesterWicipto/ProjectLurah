@@ -131,12 +131,8 @@ const Form = () => {
   };
 
   const onSearch = () => {
-    // let nik = document.getElementById("nik").value;
-    // let search = document.getElementById("search").value;
-    console.log("adsfads");
-    // if (search == nik) {
-    //   console.log("ss");
-    // }
+    const tes = array.filter((i) => i.nik.includes(nik));
+    setArr(tes);
   };
 
   return (
@@ -146,12 +142,12 @@ const Form = () => {
       <br></br>
       <br />
 
-      <form className="container d-flex">
-        <input className="form-control me-2" id="search" value={search} onChange={(e) => setSearch(e.target.value)} type="search" placeholder="Search" aria-label="Search" />
+      <div className="container d-flex">
+        <input className="form-control me-2" id="search" value={nik} onChange={(e) => setNik(e.target.value)} type="search" placeholder="Search" aria-label="Search" />
         <button className="btn btn-outline-success" onClick={onSearch}>
           Search
         </button>
-      </form>
+      </div>
       <br />
       <table className="container table table-responsive colorTable table-striped shadow-sm">
         <thead>
